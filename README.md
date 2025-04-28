@@ -1,4 +1,5 @@
 # Raspberry Pi Camera Module 2
+[Link to make87 Marketplace](https://app.make87.com/app/apps/680f2748828f057e93b9b73a)
 
 This app captures images from the [Raspberry Pi Camera Module v2](https://www.raspberrypi.com/products/camera-module-v2/) and streams them through the make87 platform. It's designed for Raspberry Pi devices running make87 — no extra setup is needed.
 
