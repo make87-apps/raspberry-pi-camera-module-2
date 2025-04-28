@@ -5,6 +5,12 @@ build_kit:
 peripheral_requirements:
   - name: CAMERA
     peripheral_type: Camera
+    constraints:
+      type: Camera
+      camera_types:
+        - Picamera
+      protocols:
+        - libcamera
   - name: ISP
     peripheral_type: ISP
 outbound_topics:
