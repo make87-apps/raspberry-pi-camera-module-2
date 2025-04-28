@@ -1,6 +1,33 @@
 build_kit:
-  name: python3
+  name: file://build_kit/Dockerfile
   version: latest
+  target_architectures: [ arm64 ]
+peripheral_requirements:
+  - name: CAMERA
+    peripheral_type: Camera
+  - name: ISP
+    peripheral_type: ISP
 outbound_topics:
-  - name: HELLO_WORLD_MESSAGE
-    message_type: make87_messages.text.text_plain.PlainText
+  - name: IMAGE
+    message_type: make87_messages.image.compressed.image_jpeg.ImageJPEG
+provider_endpoints:
+  - name: GET_CAMERA_IMAGE
+    requester_message_type: make87_messages.core.empty.Empty
+    provider_message_type: make87_messages.image.compressed.image_jpeg.ImageJPEG
+config:
+  values:
+    - name: IMAGE_WIDTH
+      description: Width of the image to be captured
+      default_value: 640
+      required: false
+      secret: false
+    - name: IMAGE_HEIGHT
+      description: Height of the image to be captured
+      default_value: 480
+      required: false
+      secret: false
+    - name: IMAGE_FORMAT
+      description: The format of the image to be captured
+      default_value: RGB888
+      required: false
+      secret: false

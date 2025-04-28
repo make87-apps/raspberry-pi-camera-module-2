@@ -8,8 +8,11 @@ version = "0.0.1"
 dependencies = [
   "make87",
   "make87_messages",
+  "opencv-python-headless",
+  "picamera2",
+  "numpy",
 ]
-description = "A small example package"
+description = "Driver for the rpi camer module 2"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
 
